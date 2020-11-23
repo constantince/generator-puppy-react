@@ -1,12 +1,12 @@
 const Generator = require("yeoman-generator");
 
-module.exports = class Business extends Generator {
+module.exports = class React extends Generator {
     //覆盖询问条件
     writing() {
-        console.log('writing to ', this.destinationPath(), this.templatePath('business'));
+        console.log('writing to ', this.destinationPath(), this.templatePath());
         // this.destinationRoot(this.destinationPath(name));
         this.fs.copyTpl(
-            this.templatePath('business'),
+            this.templatePath(),
             this.destinationPath(),
             {},
             null,

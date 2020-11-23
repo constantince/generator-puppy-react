@@ -3,7 +3,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
-const TerserWebpackPlugin = require('terser-webpack-plugin');
 const glob = require('glob');
 //全局打包环境变量，通过package的script中传入
 const env = process.env.NODE_ENV;
@@ -106,11 +105,5 @@ module.exports = {
         new MiniCssExtractPlugin(),
         new FriendlyErrorsWebpackPlugin(),
         ...plugins,
-    ],
-    optimization: {
-        minimize: true,
-        minimizer: [new TerserWebpackPlugin({
-            parallel: 4
-        })]
-    }
+    ]
 }

@@ -3,7 +3,7 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { merge } = require("webpack-merge");
 const baseConfig = require("./webpack.base");
-
+const TerserWebpackPlugin = require('terser-webpack-plugin');
 
 const proConfig = {
     mode: 'production',
@@ -21,7 +21,9 @@ const proConfig = {
                     chunks: 'all'
                 }
             }
-        }
+        },
+        minimize: true,
+        minimizer: [new TerserWebpackPlugin()]
     }
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import bucket from '../assets/images/bucket.png';
+import bucket from '../assets/images/greeting.jpg';
 import styled from 'styled-components';
 
 type CallbackTpes<T> = {
@@ -23,9 +23,9 @@ const FirstCom: React.FC<Props> = ({Params1, Params2, Params3}) => {
     const show = Params3(true);
 
     return <div>
-        <Title> HELLO styled component.</Title>
+        <Title> I am a styled component using css in js/ts.</Title>
         <img src={bucket} />
-       {show ? <p> {Params1} is {Params2} now!!! </p> : null } 
+       {show ? <p> this is params1: {Params1} and this is param2: {Params2} now!!! </p> : null } 
     </div>
 }
 
