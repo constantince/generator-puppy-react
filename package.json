@@ -1,12 +1,12 @@
 {
   "name": "generator-puppy-react",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "scaffolding for puppy-cli",
   "homepage": "",
   "author": {
     "name": "chenyan",
     "email": "alberteinstein007@126.com",
-    "url": ""
+    "url": "https://github.com/constantince/generator-puppy-react"
   },
   "files": [
     "generators"
